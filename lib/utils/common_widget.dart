@@ -8,6 +8,6 @@ class CommonAppBar extends AppBar {
           key: key,
           title: Text(title),
           leading:
-              BackButton(color: Colors.black, onPressed: () => finish(context)),
+              BackButton(color: Colors.white, onPressed: () => finish(context)),
         );
 }
