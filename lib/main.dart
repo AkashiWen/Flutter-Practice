@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/page1.dart';
+import 'package:flutter_application_2/page2.dart';
 
 import 'base/BaseWidget.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends BaseStateLessWidget {
 
   getRoutes() => {
         Page1.routeName: (context) => const Page1(),
+        Page2.routeName: (context) => const Page2(),
       };
 
   // This widget is the root of your application.
@@ -29,7 +31,7 @@ class MyApp extends BaseStateLessWidget {
             // or simply save your changes to "hot reload" in a Flutter IDE).
             // Notice that the counter didn't reset back to zero; the application
             // is not restarted.
-            primarySwatch: Colors.grey),
+            primarySwatch: Colors.green),
         home: const MyHomePage(title: 'Flutter Demo Home Page'),
         routes: getRoutes());
   }
@@ -124,9 +126,6 @@ class _BodyLayout extends StatelessWidget {
         // horizontal).
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text(
-            'You have pushed the button this many times:',
-          ),
           Text('$counter',
               style: const TextStyle(
                 fontSize: 40.0,
@@ -134,6 +133,15 @@ class _BodyLayout extends StatelessWidget {
               )
               // style: Theme.of(context).textTheme.headline4,
               ),
+          ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                // padding
+                padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
+                // 高宽
+                minimumSize: const Size(100, 40),
+              ),
+              onPressed: () => Navigator.pushNamed(context, Page2.routeName),
+              child: const Text('图片控件')),
         ],
       ),
     );
