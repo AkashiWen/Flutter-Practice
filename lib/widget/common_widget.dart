@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'navigation_utils.dart';
+import '../utils/navigation_utils.dart';
 
 /// 通用带返回的AppBar
 class CommonAppBar extends AppBar {

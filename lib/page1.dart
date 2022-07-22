@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/base/BaseWidget.dart';
-import 'package:flutter_application_2/utils/common_widget.dart';
+import 'package:flutter_application_2/widget/common_widget.dart';
 
 /// Container组件、Text组件
 class Page1 extends BaseStateLessWidget {
