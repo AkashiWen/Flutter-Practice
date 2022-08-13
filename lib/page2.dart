@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/base/BaseWidget.dart';
 import 'package:flutter_application_2/widget/common_widget.dart';
 
 /// Image组件
-class Page2 extends BaseStateLessWidget {
+class Page2 extends StatelessWidget {
   static const routeName = '/page2';
 
   const Page2({Key? key}) : super(key: key);

@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/page1.dart';
 import 'package:flutter_application_2/page2.dart';
 import 'package:flutter_application_2/page3.list.dart' as page3;
+import 'package:flutter_application_2/page4.stack.dart' as page4;
 import 'package:flutter_application_2/widget/button.nav.dart';
-
-import 'base/BaseWidget.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends BaseStateLessWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   _getRoutes() => {
         Page1.routeName: (context) => const Page1(),
         Page2.routeName: (context) => const Page2(),
         page3.MyList.routeName: (context) => const page3.MyList(),
+        page4.MyStack.routeName: (context) => page4.MyStack(),
       };
 
   // This widget is the root of your application.
@@ -77,6 +77,12 @@ class _BodyLayout extends StatelessWidget {
             text: '列表控件',
             block: () {
               Navigator.pushNamed(context, page3.MyList.routeName);
+            },
+          ),
+          ButtonNav(
+            text: 'Stack層疊控件',
+            block: () {
+              Navigator.pushNamed(context, page4.MyStack.routeName);
             },
           ),
         ],
